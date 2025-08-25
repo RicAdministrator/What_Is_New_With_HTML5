@@ -1,0 +1,28 @@
+<!-- 
+How it Works
+
+The controls attribute adds video controls, like play, pause, and volume.
+
+It is a good idea to always include width and height attributes. 
+If height and width are not set, the page might flicker while the video loads.
+
+The <source> element allows you to specify alternative video files which the browser may choose from. 
+The browser will use the first recognized format.
+
+The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element. 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <video width="640" height="480" controls>
+        <source src="../Resource/vecteezy_cartoon-background-city-park-playground-with-kids_3320990.mp4" type="video/mp4">
+        <source src="../Resource/vecteezy_cartoon-background-kids-riding-train_3439987.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+</body>
+
+</html>

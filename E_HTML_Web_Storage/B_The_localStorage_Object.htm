@@ -1,0 +1,43 @@
+<!-- 
+The localStorage object stores the data with no expiration date. 
+The data will not be lost when the browser is closed, and will be available the next day, week, or year. 
+-->
+
+<!-- 
+Example
+Use localStorage to set and retrieve name and value pairs:
+-->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="result"></div>
+
+    <script>
+        const x = document.getElementById("result");
+
+        // Check browser support
+        if (typeof (Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("lastname", "Smith");
+            localStorage.setItem("bgcolor", "yellow");
+            // Retrieve
+            x.innerHTML = localStorage.getItem("lastname");
+            x.style.backgroundColor = localStorage.getItem("bgcolor");
+        } else {
+            x.innerHTML = "Sorry, no Web storage support!";
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!-- 
+The syntax for removing the "lastname" localStorage item is as follows:
+localStorage.removeItem("lastname");
+
+Note: Name/value pairs are always stored as strings. Remember to convert them to another format when needed!
+-->
